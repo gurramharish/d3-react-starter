@@ -1,7 +1,6 @@
 import * as d3 from 'd3';
-const data = [20, 12, 30, 25, 13, 60];
 export default class D3Chart {
-  constructor(element) {
+  constructor(element, data) {
     console.log('Hi Chart invoked!!');
     let svg = d3
       .select(element)
@@ -16,8 +15,14 @@ export default class D3Chart {
       .attr('x', (d, i) => i * 100)
       .attr('y', 50)
       .attr('width', 50)
-      .attr('height', (d) => d * 10)
-      .attr('fill', 'url(#Gradient1)');
+      .attr('height', (d) => d.age * 10)
+      .attr('fill', (d) => {
+        if (d.age > 10) {
+          return 'red';
+        } else {
+          return 'green';
+        }
+      });
     // data.forEach((d, i) => {
     //   svg
     //     .append('rect')
@@ -28,4 +33,6 @@ export default class D3Chart {
     //     .attr('fill', 'url(#Gradient1)');
     // });
   }
+
+  updateData(data) {}
 }
