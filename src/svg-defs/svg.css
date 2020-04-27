@@ -1,0 +1,12 @@
+#rect1 {
+  fill: url(#Gradient1);
+}
+.stop1 {
+  stop-color: rgba(126, 213, 111, 0.8);
+}
+.stop2 {
+  stop-color: rgba(110, 195, 122, 0.8);
+}
+.stop3 {
+  stop-color: rgba(40, 180, 133, 0.8);
+}
