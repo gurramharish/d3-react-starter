@@ -10,3 +10,6 @@
 .stop3 {
   stop-color: rgba(40, 180, 133, 0.8);
 }
+.hide {
+  display: none;
+}

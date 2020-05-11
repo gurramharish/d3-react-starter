@@ -10,21 +10,7 @@ export default class ChartWrapper extends Component {
   }
 
   componentDidMount() {
-    const url = 'https://udemy-react-d3.firebaseio.com/ages.json';
-    fetch(url)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log('Data from URL :: ', data);
-        if (!this.chart) {
-          this.chart = new D3Chart(this.refs.chart, data);
-        } else {
-          this.chart.updateData(data);
-        }
-      });
-
-    // this.chartInterval = setInterval(() => {});
+    new D3Chart(this.refs.chart);
   }
 
   componentWillUnmount() {
@@ -34,10 +20,6 @@ export default class ChartWrapper extends Component {
   }
 
   render() {
-    return (
-      <div ref="chart">
-        <SVGDefs />
-      </div>
-    );
+    return <div ref="chart"></div>;
   }
 }

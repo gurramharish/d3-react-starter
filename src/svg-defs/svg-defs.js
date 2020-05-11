@@ -5,7 +5,7 @@ export default class SVGDefs extends Component {
   render() {
     return (
       <div>
-        <svg>
+        <svg width="1" height="1">
           <defs>
             <linearGradient id="Gradient1">
               <stop className="stop1" offset="0%" />
